@@ -1,0 +1,62 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-weight: normal;
+}
+
+body {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+html { 
+    background: url(background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+h2 {
+    font-weight: bolder;
+}
+td{
+    
+    border-radius: 20px;
+    text-align: center;
+}
+   
+input{
+    border-radius: 50px;
+    color: orangered;
+    font-size: 1rem;
+    text-align: center;
+}
+
+div {
+    position: absolute;
+    top: 51px;
+    margin: 80px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 46.7%;
+    height: 71.7%;
+    overflow:hidden;
+    scrollbar-width: none;
+}
+a{
+    text-decoration: none;
+    color: orangered;
+}
+input:focus{
+    outline: none;
+}

@@ -1,0 +1,35 @@
+<html lang="en-US">
+<head>
+    <script src="angular.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Bill Payment Records using AngularJS</title>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="CartForm" style="background: #000; opacity:0.9">
+    <h2>Bill Payment Record System</h2>
+    <table class="table">
+        <tr>
+            <th>Description</th>
+            <th>Qty</th>
+            <th>Cost</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        <tr ng:repeat="item in cart.items">
+            <td><input type="text" ng:model="item.description"></td>
+            <td><input type="number" ng:model="item.qty" ng:required></td>
+            <td><input type="number" ng:model="item.cost" ng:required></td>
+            <td>{{item.qty * item.cost | currency:'$ '}}</td>
+            <td>[<a href ng:click="removeItem($index)">X</a>]</td>
+        </tr>
+        <tr>
+            <td><a href ng:click="addItem()">Add( + )</a></td>
+            <td><a href ng:click="resetAll()">Reset</td>
+            <td>Total:</td>
+            <td>{{total() | currency:'$ '}}</td>
+        </tr>
+    </table>
+</div>
+<script src="cart.js"></script>
+</body>
+</html>
